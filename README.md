@@ -34,3 +34,5 @@ The following REST CRUD endpoints are exposed in the app:
 
 
 # Developed by KIRAN PATIL.
+ - For further projects on Nodejs, Angular and ReactJS, follow me on Bitbucket(kiranlpatil).
+ - Get 17 projects based on MEAN AND MERN STACK.
