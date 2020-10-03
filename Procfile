@@ -1,1 +1,1 @@
-npm run dev-server
+ts-node ./server/src/server.ts

@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "description": "Credit Management NodeJs Application",
   "scripts": {
-    "start": "npm run dev-server",
+    "start": "ts-node ./server/src/server.ts",
     "ng": "ng",
     "dev-client": "ng serve -o",
     "build-client": "ng build",
