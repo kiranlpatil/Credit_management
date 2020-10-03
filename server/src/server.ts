@@ -4,7 +4,7 @@
 // lib/server.ts
 import app from "./app";
 // tslint:disable-next-line:typedef
-const PORT = 3000;
+const PORT = process.env.PORT;
 
 app.get("/", (req, res) => {
     res.send("Welcome to my API");
