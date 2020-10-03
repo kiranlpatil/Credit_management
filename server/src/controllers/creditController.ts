@@ -1,12 +1,12 @@
 // Developed by KiranPatil
 // SpaceShift (2-10-20)
 import * as mongoose from "mongoose";
-import { ContactSchema } from "../models/contactModel";
+import { CreditSchema } from "../models/creditModel";
 import { Request, Response } from "express";
-const Contact: any = mongoose.model("Contact", ContactSchema, 'contacts');
+const Contact: any = mongoose.model("Contact", CreditSchema, 'credits');
 
 
-export class ContactController {
+export class CreditController {
     public addNewContact(req: Request, res: Response, callback: (error:any, res:any) => void) {
         let newContact: any = new Contact(req.body);
         newContact.save((err, result) => {

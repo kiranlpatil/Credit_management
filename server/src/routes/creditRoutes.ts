@@ -1,10 +1,10 @@
 // Developed by KiranPatil
 // SpaceShift (2-10-20)
 import { Request, Response} from "express";
-import { ContactController } from "../controllers/contactController";
+import { CreditController } from "../controllers/creditController";
 
 export class Routes {
-    public contactController: ContactController = new ContactController();
+    public creditController: CreditController = new CreditController();
 
     public routes(app: any): void {
         app.use((req: Request, res: Response, next) => {
@@ -23,7 +23,7 @@ export class Routes {
          *    description: get Credits of all the users
          *    responses:
          *      '200':
-         *        description: SUCCESS.
+         *        description: Swagger Running.
          */
 
         /**
@@ -62,29 +62,26 @@ export class Routes {
          *          type:string
          *        description: Company Name
          *
-         *    description: Credit added in directory
+         *    description: Add Credit in directory
          *    responses:
          *      '200':
-         *        description: Credit added.
+         *        description: Swagger Running.
          */
 
         // get and post request
         app.route("/credits")
             .post((req: Request, res: Response) => {
-                this.contactController.addNewContact(req, res,(error, response) => {
+                this.creditController.addNewContact(req, res,(error, response) => {
                     res.json(response);
                 });
             });
-            // .post(this.contactController.addNewContact);
 
         app.route('/credits')
             .get((req: Request, res: Response) => {
-                this.contactController.getContacts(req, res,(error, response) => {
+                this.creditController.getContacts(req, res,(error, response) => {
                     res.json(response);
                 });
             });
-
-        // .get(this.contactController.getContacts)
 
         /**
          * @swagger
@@ -103,7 +100,7 @@ export class Routes {
          *    description: Get Credit of a specific user
          *    responses:
          *      '200':
-         *        description: SUCCESS.
+         *        description: Swagger Running.
          */
 
         /**
@@ -147,7 +144,7 @@ export class Routes {
          *    description: Credit updated in directory
          *    responses:
          *      '200':
-         *        description: Credit changes saved.
+         *        description: Swagger Running.
          */
 
         /**
@@ -167,32 +164,28 @@ export class Routes {
          *    description: Delete credit card
          *    responses:
          *      '200':
-         *        description: Credit card deleted.
+         *        description: Swagger Running.
          */
 
-        // contact detail (getById, updateById, deleteById)
         app.route("/credits/:refId")
             .get((req: Request, res: Response) => {
-                this.contactController.getContactWithID(req, res, (error, response) => {
+                this.creditController.getContactWithID(req, res, (error, response) => {
                     res.json(response);
                 });
             });
 
         app.route("/credits/:refId")
             .put((req: Request, res: Response) => {
-                this.contactController.updateContact(req, res,(error, response) => {
+                this.creditController.updateContact(req, res,(error, response) => {
                     res.json(response);
                 });
             });
 
         app.route("/credits/:refId")
             .delete((req: Request, res: Response) => {
-                this.contactController.deleteContact(req, res,(error, response) => {
+                this.creditController.deleteContact(req, res,(error, response) => {
                     res.json(response);
                 });
             });
-            // .get(this.contactController.getContactWithID)
-            // .put(this.contactController.updateContact)
-            // .delete(this.contactController.deleteContact);
     }
 }

@@ -27,10 +27,10 @@ A simple app demonstrating REST API with nodejs, express, mongodb backend writte
 The following REST CRUD endpoints are exposed in the app:
 
 - GET /credits: Shows a list of credits
-- GET /credits/:contactId: Retrieve a contact with a specific id
-- POST /credits: Add a new contact
-- PUT /credits/:contactId: Update an existing contact
-- DELETE /credits/:contactId: Delete an existing contact
+- GET /credits/:refId: Retrieve a credit with a specific id
+- POST /credits: Add a new credit
+- PUT /credits/:refId: Update an existing credit
+- DELETE /credits/:refId: Delete an existing credit
 
 
 # Developed by KIRAN PATIL.

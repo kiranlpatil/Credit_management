@@ -2,7 +2,7 @@
 // SpaceShift (2-10-20)
 import * as express from "express";
 import * as bodyParser from "body-parser";
-import { Routes } from "./routes/contactRoutes";
+import { Routes } from "./routes/creditRoutes";
 import * as mongoose from "mongoose";
 const swaggerJsDoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
@@ -32,15 +32,15 @@ class App {
             swaggerDefinition: {
                 info: {
                     title: 'SpaceShift API',
-                    description: 'Credit Management API Information',
+                    description: 'Credit Management API Information (Get code here - https://github.com/kiranlpatil/Credit_management)',
                     contact: {
-                        name: 'Kiran Patil'
+                        name: 'Kiran Patil',
                     },
                     servers: ['http://localhost:3000']
                 }
             },
             apis: [
-                'server/src/routes/contactRoutes.ts'
+                'server/src/routes/creditRoutes.ts'
             ]
         };
 

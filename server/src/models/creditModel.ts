@@ -4,7 +4,7 @@ import * as mongoose from "mongoose";
 
 const Schema: any = mongoose.Schema;
 
-export const ContactSchema: any = new Schema({
+export const CreditSchema: any = new Schema({
     firstName: {
         type: String,
         required: "Enter a first name"
