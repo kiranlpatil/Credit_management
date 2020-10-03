@@ -11,7 +11,8 @@ class App {
 
     public app: express.Application;
     public routePrv: Routes = new Routes();
-    public mongoUrl: string = "mongodb://localhost:27017/spaceshift";
+    // public mongoUrl: string = "mongodb://localhost:27017/spaceshift";
+    public mongoUrl: string = "mongodb+srv://kiran:khash123@cluster0.rhvp9.gcp.mongodb.net/spaceshift?retryWrites=true&w=majority"
 
     constructor() {
         this.app = express();
