@@ -4,6 +4,7 @@
   "description": "Credit Management NodeJs Application",
   "scripts": {
     "start": "npm run dev-server",
+    "heroku-postbuild": "npm run dev-server",
     "ng": "ng",
     "dev-client": "ng serve -o",
     "build-client": "ng build",
